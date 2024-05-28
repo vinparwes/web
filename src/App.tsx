@@ -1,10 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ParticleBackground from './components/background/ParticleBackground';
+import SideDrawer from './components/elements/drawer/Drawer';
 
 function App() {
   return (
     <div className="App">
+      <ParticleBackground />
+      <SideDrawer/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
