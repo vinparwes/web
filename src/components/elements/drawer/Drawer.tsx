@@ -22,40 +22,40 @@ function SideDrawer() {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 style={{
-                    width: '10vh',
+                    width: '15vh',
                     height: '100vh',
                     position: 'fixed',
                     left: 0,
                     top: 0,
                     zIndex: 9999,
                     backgroundColor: 'transparent'
-                }}
-            />
-            <Drawer
-                isOpen={isOpen}
-                placement='left'
-                size='xs'
-                closeOnEsc={true}
-                colorScheme='blackAlpha'
-                onClose={onClose}
-            >
-                <DrawerOverlay />
-                <DrawerContent >
-                    <DrawerCloseButton />
-                    <DrawerHeader>Create your account</DrawerHeader>
+                }}>
+                <Drawer
+                    isOpen={isOpen}
+                    placement='left'
+                    size='xs'
+                    closeOnEsc={true}
+                    colorScheme='blackAlpha'
+                    onClose={onClose}
+                >
+                    <DrawerOverlay />
+                    <DrawerContent >
+                        <DrawerCloseButton />
+                        <DrawerHeader>Create your account</DrawerHeader>
 
-                    <DrawerBody>
-                        <Input placeholder='Type here...' />
-                    </DrawerBody>
+                        <DrawerBody>
+                            <Input placeholder='Type here...' />
+                        </DrawerBody>
 
-                    <DrawerFooter>
-                        <Button variant='outline' mr={3} onClick={onClose}>
-                            Cancel
-                        </Button>
-                        <Button colorScheme='blue'>Save</Button>
-                    </DrawerFooter>
-                </DrawerContent>
-            </Drawer>
+                        <DrawerFooter>
+                            <Button variant='outline' mr={3} onClick={onClose}>
+                                Cancel
+                            </Button>
+                            <Button colorScheme='blue'>Save</Button>
+                        </DrawerFooter>
+                    </DrawerContent>
+                </Drawer>
+            </div >
         </>
     )
 }

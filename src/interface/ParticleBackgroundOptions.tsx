@@ -50,7 +50,7 @@ export default function ParticleOptions(): ISourceOptions {
                 direction: "left",
                 enable: true,
                 outModes: {
-                    default: "bounce",
+                    default: "out",
                 },
                 random: false,
                 speed: 0.1,
@@ -60,7 +60,7 @@ export default function ParticleOptions(): ISourceOptions {
                 density: {
                     enable: false,
                 },
-                value: 200,
+                value: 1000,
             },
             opacity: {
                 value: { min: 0.5, max: 1 },
