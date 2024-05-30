@@ -12,6 +12,7 @@ interface ProjectDetails {
     iconPath: string,
     alt: string,
     frameWorkIcons: React.ElementType[],
+    frameWorkHeaders : Array<string>,
     projectUrls: Array<string>
 }
 
@@ -31,6 +32,11 @@ const projects: Project = {
             ReactIcon,
             TypescriptIcon
         ],
+        frameWorkHeaders: [
+            "Chrakra",
+            "React",
+            "TypeScript"
+        ],
         projectUrls: [
             "https://github.com/patriknotvincent/web"
         ]
@@ -45,6 +51,12 @@ const projects: Project = {
             SpringBootIcon,
             MongoDbIcon,
             KotlinIcon
+        ],
+        frameWorkHeaders : [
+            "Android",
+            "Spring Boot",
+            "Mongo DB",
+            "Kotlin"
         ],
         projectUrls: [
             "https://github.com/patriknotvincent/rom-cli.git",

@@ -1,7 +1,8 @@
+import { extendTheme } from "@chakra-ui/react";
 import { cardTheme } from "./cardStyles";
 import { buttonTheme } from "./buttonStyles";
-import { extendTheme } from "@chakra-ui/react";
 import { drawerTheme } from "./drawerStyles";
+import { dividerTheme } from "./dividerStyles";
 
 let theme;
 export default theme = extendTheme({
@@ -30,8 +31,8 @@ export default theme = extendTheme({
     },
   },
   components: {
-    Button: buttonTheme,
     Card: cardTheme,
-    Drawer : drawerTheme
+    Button: buttonTheme,
+    Drawer : drawerTheme,
   },
 });

@@ -5,11 +5,12 @@ const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpe
   cardAnatomy.keys,
 );
 
-const edu_case = definePartsStyle({
+const brand = definePartsStyle({
   container: {
+    bgColor: '#EFEFEF',
     borderColor: 'gray.400',
-    borderWidth: '2px',
-    bgColor: 'cyan.50',
+    borderWidth: '1px',
+    borderRadius: '0',
 
     _dark: {
       bgColor: 'gray.600',
@@ -17,22 +18,13 @@ const edu_case = definePartsStyle({
   },
 });
 
-const edu_card = definePartsStyle({
-  container: {
-    borderColor: 'gray',
-    borderWidth: '2px',
-    borderStyle: 'solid',
-  },
-  header: {
-    borderRadius: '3',
-  },
-});
-
 // export variants in the component theme
 export const cardTheme = defineMultiStyleConfig({
   variants: {
-    edu_case,
-    edu_card,
+    brand
+  },
+  defaultProps: {
+    variant: 'brand',
   },
 });
 

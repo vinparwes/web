@@ -1,31 +1,25 @@
-import { defineStyle } from "@chakra-ui/react";
-import { defineStyleConfig } from "@chakra-ui/react";
+import { drawerAnatomy as parts } from '@chakra-ui/anatomy'
+import { createMultiStyleConfigHelpers } from '@chakra-ui/styled-system'
 
-const outline = defineStyle({
-    border: '2px dashed',
-    borderRadius: 0,
-    fontWeight: 'semibold',
-});
+const { definePartsStyle, defineMultiStyleConfig } =
+    createMultiStyleConfigHelpers(parts.keys)
 
-const brand = defineStyle({
-    border: '2px solid',
-    borderColor: 'gray.400',
-    borderRadius: 'md',
-    bgColor: 'gray.100',
-    px: '2%',
-    py: '1%',
+const purple = definePartsStyle({
+    dialog: {
+        borderRadius: 'md',
+        bg: `#DCDCDC`,
 
-    _dark: {
-        border: '2px solid',
-        borderColor: 'gray.200',
-        bgColor: 'gray.600',
-        textColor: 'gray.200',
+        // Let's also provide dark mode alternatives
+        _dark: {
+            bg: `black.600`,
+            color: 'white',
+        },
     },
-});
+})
 
-export const drawerTheme = defineStyleConfig({
-    variants: { brand, outline },
+export const drawerTheme = defineMultiStyleConfig({
+
     defaultProps: {
-        variant: 'brand',
+        variant: 'purple',
     },
-});
+})
