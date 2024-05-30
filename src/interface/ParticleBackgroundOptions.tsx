@@ -1,15 +1,21 @@
 
-import { ISourceOptions } from "@tsparticles/engine";
+import {
+    type Container,
+    type ISourceOptions,
+    MoveDirection,
+    OutMode,
+  } from "@tsparticles/engine";
 import { useMemo } from "react";
 
 export default function ParticleOptions(): ISourceOptions {
     return useMemo(() => ({
         background: {
             color: {
-                value: "#000000",
+                value: "#E5E4E2",
             },
+            opacity: 200,
         },
-        fpsLimit: 120,
+        fpsLimit: 60,
         interactivity: {
             events: {
                 onClick: {
@@ -20,56 +26,64 @@ export default function ParticleOptions(): ISourceOptions {
                 onHover: {
                     enable: true,
                     mode: "repulse",
-                },
-                */
+                },*/
             },
             modes: {
                 push: {
                     quantity: 4,
                 },
                 repulse: {
-                    distance: 200,
-                    duration: 0.4,
+                    distance: 30,
+                    duration: 0.1,
                 },
             },
         },
         particles: {
             color: {
-                value: "#ffffff",
+                value: "#000000",
             },
-            /*
+            collisions: {
+                enable: true,
+            },
+            
             links: {
-                color: "#ffffff",
+                color: "#B2BEB5",
                 distance: 150,
                 enable: true,
                 opacity: 0.5,
                 width: 1,
             },
-            */
+            
             move: {
-                direction: "left",
+                direction: MoveDirection.none,
                 enable: true,
                 outModes: {
                     default: "out",
                 },
-                random: false,
-                speed: 0.1,
+                random: true,
+                speed: {
+                    min : 0.1,
+                    max : 0.5
+                },
                 straight: false,
             },
             number: {
                 density: {
-                    enable: false,
+                    enable: true,
                 },
-                value: 1000,
+                value: 100,
             },
             opacity: {
-                value: { min: 0.5, max: 1 },
+                value: {
+                    min: 0.1,
+                    max: 1
+                },
             },
             shape: {
                 type: "circle",
             },
             size: {
-                value: { min: 0.1, max: 1.5 },
+                value: { min: 0.01, max: 1.5 },
             },
         },
         detectRetina: true,

@@ -31,11 +31,9 @@ function SideDrawer() {
                     backgroundColor: 'transparent'
                 }}>
                 <Drawer
+                    variant={'outline'}
                     isOpen={isOpen}
                     placement='left'
-                    size='xs'
-                    closeOnEsc={true}
-                    colorScheme='blackAlpha'
                     onClose={onClose}
                 >
                     <DrawerOverlay />
@@ -51,7 +49,7 @@ function SideDrawer() {
                             <Button variant='outline' mr={3} onClick={onClose}>
                                 Cancel
                             </Button>
-                            <Button colorScheme='blue'>Save</Button>
+                            <Button colorScheme='blackAlpha'>Save</Button>
                         </DrawerFooter>
                     </DrawerContent>
                 </Drawer>

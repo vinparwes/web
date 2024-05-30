@@ -3,6 +3,7 @@ import Particles, { initParticlesEngine, } from "@tsparticles/react";
 import { useState, useEffect } from "react";
 import ParticleOptions from "../../interface/ParticleBackgroundOptions";
 import { loadSlim } from '@tsparticles/slim';
+import { Box } from "@chakra-ui/react";
 
 function ParticleBackground() {
     const [init, setInit] = useState(false);
@@ -18,11 +19,13 @@ function ParticleBackground() {
 
     if (init) {
         return (
-            <div>
-                <Particles
-                    id="tsparticles"
-                    options={options}
-                />
+            <div >
+                <Box filter={'auto'} >
+                    <Particles
+                        id="tsparticles"
+                        options={options}
+                    />
+                </Box>
             </div>
         );
     }

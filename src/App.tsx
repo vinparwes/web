@@ -1,7 +1,7 @@
 import React from 'react';
 import ParticleBackground from './components/background/ParticleBackground';
 import SideDrawer from './components/elements/drawer/Drawer';
-import { Card, Grid, GridItem, Text } from '@chakra-ui/react';
+import { Grid, GridItem, Text } from '@chakra-ui/react';
 import ProjectCard from './components/elements/card/ProjectCard';
 import projects from './interface/Projects';
 
@@ -46,11 +46,7 @@ function App() {
           area={'main'}
           borderRight={'1px ridge'}
         >
-          <ProjectCard {...projects.webProfile} />
-          <ProjectCard {...projects.projectROM} />
-          <ProjectCard {...projects.webProfile} />
-          <ProjectCard {...projects.projectROM} />
-          <ProjectCard {...projects.webProfile} />
+
           <ProjectCard {...projects.projectROM} />
 
         </GridItem>

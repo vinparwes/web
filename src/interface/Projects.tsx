@@ -1,11 +1,17 @@
-
+import {ReactComponent as AndroidIcon} from "../assets/icons/AndroidIcon.svg"
+import {ReactComponent as ChakraIcon} from "../assets/icons/ChakraIcon.svg"
+import {ReactComponent as KotlinIcon} from "../assets/icons/KotlinIcon.svg"
+import {ReactComponent as MongoDbIcon} from "../assets/icons/MongoDbIcon.svg"
+import {ReactComponent as ReactIcon} from "../assets/icons/ReactIcon.svg"
+import {ReactComponent as SpringBootIcon} from "../assets/icons/SpringBootIcon.svg"
+import {ReactComponent as TypescriptIcon} from "../assets/icons/TypescriptIcon.svg"
 
 interface ProjectDetails {
     heading: string,
     description: string,
     iconPath: string,
     alt: string,
-    frameWorkIcons: Array<React.FunctionComponent<React.SVGProps<SVGSVGElement>>>,
+    frameWorkIcons: React.ElementType[],
     projectUrls: Array<string>
 }
 
@@ -21,10 +27,9 @@ const projects: Project = {
         iconPath: "",
         alt: "No icon found",
         frameWorkIcons: [
-            /*ChakraLogo,
-            ReactLogo,
-            TypeScriptLogo,
-            JavaScriptLogo*/
+            ChakraIcon,
+            ReactIcon,
+            TypescriptIcon
         ],
         projectUrls: [
             "https://github.com/patriknotvincent/web"
@@ -36,11 +41,10 @@ const projects: Project = {
         iconPath: "",
         alt: "No icon found",
         frameWorkIcons: [
-            /*AndroidLogo,
-            SpringBootLogo,
-            MongoDbLogo,
-            KotlinLogo
-            */
+            AndroidIcon,
+            SpringBootIcon,
+            MongoDbIcon,
+            KotlinIcon
         ],
         projectUrls: [
             "https://github.com/patriknotvincent/rom-cli.git",
