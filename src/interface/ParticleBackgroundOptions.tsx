@@ -1,9 +1,7 @@
 
 import {
-    type Container,
     type ISourceOptions,
     MoveDirection,
-    OutMode,
   } from "@tsparticles/engine";
 import { useMemo } from "react";
 
@@ -71,7 +69,7 @@ export default function ParticleOptions(): ISourceOptions {
                 density: {
                     enable: true,
                 },
-                value: 100,
+                value: 200,
             },
             opacity: {
                 value: {

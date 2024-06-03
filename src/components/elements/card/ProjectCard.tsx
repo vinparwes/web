@@ -1,6 +1,23 @@
-import { Card, CardBody, Stack, Heading, Divider, CardFooter, ButtonGroup, Button, Box, Skeleton, Icon, background, CardHeader, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger } from "@chakra-ui/react"
+import {
+    Card,
+    CardBody,
+    Stack,
+    Heading,
+    Divider,
+    CardFooter,
+    Popover,
+    PopoverArrow,
+    PopoverBody,
+    PopoverCloseButton,
+    PopoverContent,
+    PopoverHeader,
+    PopoverTrigger,
+    Link,
+    ScaleFade,
+    Box
+} from "@chakra-ui/react"
 import { Text } from "@chakra-ui/react"
-import { useEffect, useState } from "react"
+import { progLink } from "../../../interface/ProgrammingLinks"
 
 interface ProjectCardProps {
     heading: string,
@@ -10,34 +27,23 @@ interface ProjectCardProps {
     frameWorkIcons: React.ElementType[],
     frameWorkHeaders: Array<string>,
     projectUrls: Array<string>
+    delay: number
 }
 
-function ProjectCard({ heading, description, iconPath, alt, frameWorkIcons, frameWorkHeaders, projectUrls }: ProjectCardProps) {
-    const [isLoaded, setIsLoaded] = useState(false)
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsLoaded(true);
-        }, 1);
-        return () => clearTimeout(timer);
-    }, []);
-
+function ProjectCard({ heading, description, frameWorkIcons, frameWorkHeaders, projectUrls, delay }: ProjectCardProps) {
     return (
         <>
-            <Card maxW={'sm'} margin={'10px'}>
-                <Skeleton
-                    isLoaded={isLoaded}
-                    fadeDuration={0.5}
-                >
+            <ScaleFade in={true} initialScale={0.9} delay={delay}>
+                <Card maxW={'sm'} margin={'10px'}>
                     <CardBody justifyContent={'center'}>
                         <Stack mt='3' spacing='3'>
                             <Heading textAlign={'center'} size='md' userSelect={'none'}>{heading}</Heading>
                             <Text userSelect={'none'}>{description}</Text>
                         </Stack>
-
                     </CardBody>
                     <Divider borderColor={'black.500'} />
                     <Stack mt='3' spacing='3'>
-                        <Heading userSelect={'none'} textAlign={'center'} size='md'>{'Technologie(s)'}</Heading>
+                        <Heading userSelect={'none'} textAlign={'center'} size='md'>{frameWorkHeaders.length > 1 ? "Technologies" : "Technology"}</Heading>
                         <Stack
                             justifyContent={'center'}
                             direction="row"
@@ -55,7 +61,7 @@ function ProjectCard({ heading, description, iconPath, alt, frameWorkIcons, fram
                                             <PopoverArrow />
                                             <PopoverCloseButton />
                                             <PopoverBody>
-                                                {frameWorkHeaders[index]}
+                                                <Link isExternal href={progLink(frameWorkHeaders[index])}>{progLink(frameWorkHeaders[index])}</Link>
                                             </PopoverBody>
                                         </PopoverContent>
                                     </Popover>
@@ -68,7 +74,7 @@ function ProjectCard({ heading, description, iconPath, alt, frameWorkIcons, fram
                     <Divider borderColor={'black.500'} />
                     <CardFooter>
                         <Stack>
-                            <Heading userSelect={'none'} textAlign={'center'} size='md'>{"Project Link(s)"}</Heading>
+                            <Heading userSelect={'none'} textAlign={'center'} size='md'>{projectUrls.length > 1 ? "Links" : "Link"}</Heading>
                             {projectUrls.map((text, index) => (
                                 <a href={text} target="_blank" rel="noreferrer">
                                     {text}
@@ -76,8 +82,8 @@ function ProjectCard({ heading, description, iconPath, alt, frameWorkIcons, fram
                             ))}
                         </Stack>
                     </CardFooter>
-                </Skeleton>
-            </Card>
+                </Card>
+            </ScaleFade>
 
         </>
     )

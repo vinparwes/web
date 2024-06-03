@@ -2,21 +2,21 @@ import {
     Drawer,
     DrawerBody,
     DrawerFooter,
-    DrawerHeader,
     DrawerOverlay,
     DrawerContent,
     DrawerCloseButton,
-    useDisclosure,
     Button,
-    Input,
+    Stack,
 } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom'
 
 interface SideDrawerArgs {
-    isOpen : boolean,
-    onClose : any
+    isOpen: boolean,
+    onClose: any
 }
 
-function SideDrawer({ isOpen, onClose } : SideDrawerArgs) {
+function SideDrawer({ isOpen, onClose }: SideDrawerArgs) {
+    const navigation = useNavigate()
     return (
         <>
             <Drawer
@@ -28,17 +28,30 @@ function SideDrawer({ isOpen, onClose } : SideDrawerArgs) {
                 <DrawerOverlay />
                 <DrawerContent >
                     <DrawerCloseButton />
-                    <DrawerHeader>Create your account</DrawerHeader>
-
                     <DrawerBody>
-                        <Input placeholder='Type here...' />
+                        <Stack>
+                            <Button onClick={() => {
+                                navigation('/about')
+                                onClose()
+                            }}>
+                                About
+                            </Button>
+                            <Button onClick={() => {
+                                navigation('/projects')
+                                onClose()
+                            }
+                            }>
+                                Projects
+                            </Button>
+                            <Button onClick={() => {
+                                navigation('/contact')
+                                onClose()
+                            }}>
+                                Contact
+                            </Button>
+                        </Stack>
                     </DrawerBody>
-
                     <DrawerFooter>
-                        <Button variant='outline' mr={3} onClick={onClose}>
-                            Cancel
-                        </Button>
-                        <Button colorScheme='blackAlpha'>Save</Button>
                     </DrawerFooter>
                 </DrawerContent>
             </Drawer>
