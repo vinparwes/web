@@ -7,6 +7,7 @@ import {
     DrawerCloseButton,
     Button,
     Stack,
+    DrawerHeader,
 } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
 
@@ -27,9 +28,10 @@ function SideDrawer({ isOpen, onClose }: SideDrawerArgs) {
             >
                 <DrawerOverlay />
                 <DrawerContent >
+                    <DrawerHeader/>
                     <DrawerCloseButton />
                     <DrawerBody>
-                        <Stack>
+                        <Stack mt='5'>
                             <Button onClick={() => {
                                 navigation('/about')
                                 onClose()

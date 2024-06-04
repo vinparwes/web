@@ -76,9 +76,7 @@ function ProjectCard({ heading, description, frameWorkIcons, frameWorkHeaders, p
                         <Stack>
                             <Heading userSelect={'none'} textAlign={'center'} size='md'>{projectUrls.length > 1 ? "Links" : "Link"}</Heading>
                             {projectUrls.map((text, index) => (
-                                <a href={text} target="_blank" rel="noreferrer">
-                                    {text}
-                                </a>
+                                <Link isExternal href={text}>{text}</Link>
                             ))}
                         </Stack>
                     </CardFooter>

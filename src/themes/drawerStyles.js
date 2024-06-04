@@ -4,7 +4,7 @@ import { createMultiStyleConfigHelpers } from '@chakra-ui/styled-system'
 const { definePartsStyle, defineMultiStyleConfig } =
     createMultiStyleConfigHelpers(parts.keys)
 
-const purple = definePartsStyle({
+const brand = definePartsStyle({
     dialog: {
         borderRadius: 'md',
         bg: `#DCDCDC`,
@@ -20,6 +20,6 @@ const purple = definePartsStyle({
 export const drawerTheme = defineMultiStyleConfig({
 
     defaultProps: {
-        variant: 'purple',
+        variant: 'brand',
     },
 })

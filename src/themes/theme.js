@@ -2,6 +2,7 @@ import { extendTheme } from "@chakra-ui/react";
 import { cardTheme } from "./cardStyles";
 import { buttonTheme } from "./buttonStyles";
 import { drawerTheme } from "./drawerStyles";
+import { textTheme } from "./textStyles";
 import { dividerTheme } from "./dividerStyles";
 
 let theme;
@@ -26,13 +27,15 @@ export default theme = extendTheme({
   styles: {
     global: {
       '*, *::before, *::after': {
-        boxSizing: 'border-box',
       },
     },
   },
   components: {
+    Text: textTheme,
+    Heading: textTheme,
+    Link: textTheme,
     Card: cardTheme,
     Button: buttonTheme,
-    Drawer : drawerTheme,
+    Drawer: drawerTheme,
   },
 });

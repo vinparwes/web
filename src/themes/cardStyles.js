@@ -7,13 +7,13 @@ const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpe
 
 const brand = definePartsStyle({
   container: {
-    bgColor: '#EFEFEF',
+    bgColor: '#FFFFFF',
     borderColor: 'gray.400',
     borderWidth: '1px',
     borderRadius: '0',
 
     _dark: {
-      bgColor: 'gray.600',
+      bgColor: '#FFFFFF',
     },
   },
 });
