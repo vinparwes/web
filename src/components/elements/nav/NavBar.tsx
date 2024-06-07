@@ -1,63 +1,35 @@
-import { ReactNode } from 'react';
 import {
-    Box,
     Flex,
-    Avatar,
-    Link,
-
-    useDisclosure,
-    useColorModeValue,
-    Stack,
     useColorMode,
-    Center,
-    HStack,
+    Stack,
 } from '@chakra-ui/react';
 import AboutButton from '../buttons/AboutButton';
 import ContactButton from '../buttons/ContactButton';
 import ProjectsButton from '../buttons/ProjectsButton';
+import ModeButton from '../buttons/ModeButton';
+import VIcon from '../react_icons/VIcon';
 
-const Links = ['Dashboard', 'Projects', 'Team'];
-
-const NavLink = ({ children }: { children: ReactNode }) => (
-    <Link
-        px={2}
-        py={1}
-        rounded={'md'}
-        _hover={{
-            textDecoration: 'none',
-            bg: useColorModeValue('gray.200', 'gray.700'),
-        }}
-        href={'#'}>
-        {children}
-    </Link>
-);
 
 function NavBar() {
-    const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <>
-            <Box px={4} position={'relative'}>
-                <Flex h={'6vh'} justifyContent={'center'}>
-                    <Center>
-                        <HStack spacing={8} alignItems={'center'}>
-                            <AboutButton/>
-                            <ProjectsButton/>
-                            <ContactButton/>
-                        </HStack>
-                    </Center>
+            <Flex h={16} alignItems={'center'} justifyContent={'space-between'} position={'relative'}>
+                <Flex alignItems={'center'} ml={'2vh'}>
+                    <Stack direction={'row'} spacing={7}>
+                        <VIcon />
+                    </Stack>
                 </Flex>
-                {isOpen ? (
-                    <Box pb={4} display={{ md: 'none' }}>
-                        <Stack as={'nav'} spacing={4}>
-                            {Links.map((link) => (
-                                <NavLink key={link}>{link}</NavLink>
-                            ))}
-                        </Stack>
-                    </Box>
-                ) : null}
-            </Box >
-
-            <Box p={4}>Main Content Here</Box>
+                <Flex alignItems={'center'}>
+                    <AboutButton />
+                    <ProjectsButton />
+                    <ContactButton />
+                </Flex >
+                <Flex alignItems={'center'} mr={'1vh'}>
+                    <Stack direction={'row'} spacing={7}>
+                        <ModeButton></ModeButton>
+                    </Stack>
+                </Flex>
+            </Flex>
         </>
     );
 }

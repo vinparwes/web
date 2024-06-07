@@ -18,50 +18,66 @@ import {
 } from "@chakra-ui/react"
 import { Text } from "@chakra-ui/react"
 import { progLink } from "../../../interface/ProgrammingLinks"
+import { Project, ProjectDetails } from "../../../interface/Projects"
 
 interface ProjectCardProps {
-    heading: string,
-    description: string,
-    iconPath: string,
-    alt: string,
-    frameWorkIcons: React.ElementType[],
-    frameWorkHeaders: Array<string>,
-    projectUrls: Array<string>
-    delay: number
+    projectDetails: ProjectDetails,
+    delay: number,
 }
 
-function ProjectCard({ heading, description, frameWorkIcons, frameWorkHeaders, projectUrls, delay }: ProjectCardProps) {
+function ProjectCard({ projectDetails, delay }: ProjectCardProps) {
     return (
         <>
             <ScaleFade in={true} initialScale={0.9} delay={delay}>
                 <Card maxW={'sm'} margin={'10px'}>
                     <CardBody justifyContent={'center'}>
                         <Stack mt='3' spacing='3'>
-                            <Heading textAlign={'center'} size='md' userSelect={'none'}>{heading}</Heading>
-                            <Text userSelect={'none'}>{description}</Text>
+                            <Heading
+                                textAlign={'center'}
+                                size='md'
+                                userSelect={'none'}
+                            >
+                                {projectDetails.heading}
+                            </Heading>
+                            <Text
+                                userSelect={'none'}
+                            >
+                                {projectDetails.description}
+                            </Text>
                         </Stack>
                     </CardBody>
                     <Divider borderColor={'black.500'} />
                     <Stack mt='3' spacing='3'>
-                        <Heading userSelect={'none'} textAlign={'center'} size='md'>{frameWorkHeaders.length > 1 ? "Technologies" : "Technology"}</Heading>
+                        <Heading
+                            userSelect={'none'}
+                            textAlign={'center'}
+                            size='md'
+                        >
+                            {projectDetails.frameWorkHeaders.length > 1 ? "Technologies" : "Technology"}
+                        </Heading>
                         <Stack
                             justifyContent={'center'}
                             direction="row"
                             mb={'3'}
                             divider={<Divider orientation="vertical" />}
                         >
-                            {frameWorkIcons.map((Icon, index) => (
+                            {projectDetails.frameWorkIcons.map((Icon, index) => (
                                 <Box ml={3}>
                                     <Popover trigger="hover">
                                         <PopoverTrigger>
                                             <Icon key={index} width="4vh" height="4vh" />
                                         </PopoverTrigger>
                                         <PopoverContent>
-                                            <PopoverHeader fontWeight='semibold'>{frameWorkHeaders[index]}</PopoverHeader>
+                                            <PopoverHeader fontWeight='semibold'>{projectDetails.frameWorkHeaders[index]}</PopoverHeader>
                                             <PopoverArrow />
                                             <PopoverCloseButton />
                                             <PopoverBody>
-                                                <Link isExternal href={progLink(frameWorkHeaders[index])}>{progLink(frameWorkHeaders[index])}</Link>
+                                                <Link
+                                                    isExternal
+                                                    href={progLink(projectDetails.frameWorkHeaders[index])}
+                                                >
+                                                    {progLink(projectDetails.frameWorkHeaders[index])}
+                                                </Link>
                                             </PopoverBody>
                                         </PopoverContent>
                                     </Popover>
@@ -74,8 +90,13 @@ function ProjectCard({ heading, description, frameWorkIcons, frameWorkHeaders, p
                     <Divider borderColor={'black.500'} />
                     <CardFooter>
                         <Stack>
-                            <Heading userSelect={'none'} textAlign={'center'} size='md'>{projectUrls.length > 1 ? "Links" : "Link"}</Heading>
-                            {projectUrls.map((text, index) => (
+                            <Heading
+                                userSelect={'none'}
+                                textAlign={'center'}
+                                size='md'>
+                                {projectDetails.projectUrls.length > 1 ? "Links" : "Link"}
+                            </Heading>
+                            {projectDetails.projectUrls.map((text, index) => (
                                 <Link isExternal href={text}>{text}</Link>
                             ))}
                         </Stack>

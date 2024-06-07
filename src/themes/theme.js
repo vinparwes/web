@@ -1,41 +1,36 @@
 import { extendTheme } from "@chakra-ui/react";
 import { cardTheme } from "./cardStyles";
 import { buttonTheme } from "./buttonStyles";
-import { drawerTheme } from "./drawerStyles";
-import { textTheme } from "./textStyles";
-import { dividerTheme } from "./dividerStyles";
+import { iconTheme } from "./iconThemes";
+import { boxTheme } from "./boxStyles";
 
 let theme;
-export default theme = extendTheme({
-  colors: {
-    brand: {
-      bg: '#f2f2f2',
-      text: '#fff',
-      card: '#0A99FF',
-      neutralButton: '#737373',
-    },
-    gu: {
-      bg: '#004b89',
-    },
-    success: {
-      bg: '#8BD49A',
-    },
-    fail: {
-      bg: '#E05D65',
-    },
-  },
-  styles: {
-    global: {
-      '*, *::before, *::after': {
+export default theme = extendTheme(
+  {
+    colors: {
+      brand: {
       },
+      white: '#ffffff',
+      black: '#000000',
     },
-  },
-  components: {
-    Text: textTheme,
-    Heading: textTheme,
-    Link: textTheme,
-    Card: cardTheme,
-    Button: buttonTheme,
-    Drawer: drawerTheme,
-  },
-});
+    styles: {
+      global: (props) => ({
+        "html, body": {
+          transition: "background-color fill 0.5s ease",
+        },
+        "*::placeholder": {
+          color: props.colorMode === 'dark' ? 'gray.400' : 'gray.500',
+        },
+        "*, *::before, *::after": {
+          borderColor: props.colorMode === 'dark' ? 'gray.600' : 'gray.200',
+        },
+      }),
+    },
+    components: {
+      Box: boxTheme,
+      Icon: iconTheme,
+      Card: cardTheme,
+      Button: buttonTheme,
+    },
+  }
+)

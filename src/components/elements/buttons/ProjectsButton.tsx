@@ -9,11 +9,14 @@ function ProjectsButton() {
     return (
         <>
             <IconButton
+                variant={'iconButton'}
+                transition="bg 0.2s, color 0.2s"
                 aria-label="About my projects"
                 size={'lg'}
+                mr={'1vh'}
                 icon={<ProjectsIcon />}
                 onClick={() => navigation('/projects')}
-                >
+            >
             </IconButton>
         </>
     )

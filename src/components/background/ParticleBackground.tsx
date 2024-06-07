@@ -1,9 +1,11 @@
 import { ISourceOptions } from "@tsparticles/engine";
 import Particles, { initParticlesEngine, } from "@tsparticles/react";
 import { useState, useEffect } from "react";
-import ParticleOptions from "../../interface/ParticleBackgroundOptions";
 import { loadSlim } from '@tsparticles/slim';
-import { Box } from "@chakra-ui/react";
+import { Box, useColorMode } from "@chakra-ui/react";
+import ParticleOptionsDarkMode from "../../interface/ParticleBackgroundOptionsDarkMode";
+import ParticleOptionsLightMode from "../../interface/ParticleBackgroundOptionsLightMode";
+
 
 function ParticleBackground() {
     const [init, setInit] = useState(false);
@@ -14,16 +16,18 @@ function ParticleBackground() {
             setInit(true);
         });
     }, []);
+    const { colorMode } = useColorMode(); 
 
-    const options: ISourceOptions = ParticleOptions()
-
+    const optionsLight: ISourceOptions = ParticleOptionsLightMode()
+    const optionsDark: ISourceOptions = ParticleOptionsDarkMode()
+    
     if (init) {
         return (
             <div >
-                <Box filter={'auto'} >
+                <Box >
                     <Particles
                         id="tsparticles"
-                        options={options}
+                        options={colorMode === 'light' ? optionsLight : optionsDark}
                     />
                 </Box>
             </div>

@@ -1,22 +1,22 @@
-import {ReactComponent as AndroidIcon} from "../assets/icons/AndroidIcon.svg"
-import {ReactComponent as ChakraIcon} from "../assets/icons/ChakraIcon.svg"
-import {ReactComponent as KotlinIcon} from "../assets/icons/KotlinIcon.svg"
-import {ReactComponent as MongoDbIcon} from "../assets/icons/MongoDbIcon.svg"
-import {ReactComponent as ReactIcon} from "../assets/icons/ReactIcon.svg"
-import {ReactComponent as SpringBootIcon} from "../assets/icons/SpringBootIcon.svg"
-import {ReactComponent as TypescriptIcon} from "../assets/icons/TypescriptIcon.svg"
+import { ReactComponent as AndroidIcon } from "../assets/icons/AndroidIcon.svg"
+import { ReactComponent as ChakraIcon } from "../assets/icons/ChakraIcon.svg"
+import { ReactComponent as KotlinIcon } from "../assets/icons/KotlinIcon.svg"
+import { ReactComponent as MongoDbIcon } from "../assets/icons/MongoDbIcon.svg"
+import { ReactComponent as ReactIcon } from "../assets/icons/ReactIcon.svg"
+import { ReactComponent as SpringBootIcon } from "../assets/icons/SpringBootIcon.svg"
+import { ReactComponent as TypescriptIcon } from "../assets/icons/TypescriptIcon.svg"
 
-interface ProjectDetails {
+export interface ProjectDetails {
     heading: string,
     description: string,
     iconPath: string,
     alt: string,
     frameWorkIcons: React.ElementType[],
-    frameWorkHeaders : Array<string>,
+    frameWorkHeaders: Array<string>,
     projectUrls: Array<string>
 }
 
-interface Project {
+export interface Project {
     webProfile: ProjectDetails,
     projectROM: ProjectDetails
 }
@@ -52,7 +52,7 @@ const projects: Project = {
             MongoDbIcon,
             KotlinIcon
         ],
-        frameWorkHeaders : [
+        frameWorkHeaders: [
             "Android",
             "Spring Boot",
             "Mongo DB",

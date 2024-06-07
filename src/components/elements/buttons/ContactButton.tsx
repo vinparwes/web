@@ -9,6 +9,7 @@ function ContactButton() {
     return (
         <>
             <IconButton
+                variant={'iconButton'}
                 aria-label="Contact links"
                 size={'lg'}
                 icon={<LinkIcon />}

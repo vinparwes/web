@@ -1,4 +1,4 @@
-import { Box, Center, Heading, ScaleFade, Stack } from "@chakra-ui/react"
+import { Box, Center, Heading, ScaleFade, Stack, useStyleConfig } from "@chakra-ui/react"
 import { Text } from "@chakra-ui/react"
 
 function AboutSection() {
@@ -7,14 +7,7 @@ function AboutSection() {
             <ScaleFade in={true} initialScale={0.9} delay={0.05}>
                 <Center>
                     <Box
-                        position={'relative'}
-                        bg='tomato'
-                        p={4}
-                        borderRadius={20}
-                        background={'#FFFFFF'}
-                        w={'100vh'}
-                        ml={'1vh'}
-                        mr={'1vh'}
+
                     >
                         <Stack>
                             <ScaleFade in={true} initialScale={0.9} delay={0.1}>
@@ -56,7 +49,7 @@ function AboutSection() {
                         </Stack>
                     </Box >
                 </Center>
-            </ScaleFade>
+            </ScaleFade >
         </>
     )
 }

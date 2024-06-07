@@ -5,7 +5,7 @@ import {
   } from "@tsparticles/engine";
 import { useMemo } from "react";
 
-export default function ParticleOptions(): ISourceOptions {
+export default function ParticleOptionsLightMode(): ISourceOptions {
     return useMemo(() => ({
         background: {
             color: {

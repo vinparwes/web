@@ -10,10 +10,12 @@ const brand = definePartsStyle({
     bgColor: '#FFFFFF',
     borderColor: 'gray.400',
     borderWidth: '1px',
-    borderRadius: '0',
-
+    borderRadius: '10',
     _dark: {
-      bgColor: '#FFFFFF',
+      bgColor: 'black',
+      '& svg path': {
+        stroke: 'black',
+      },
     },
   },
 });

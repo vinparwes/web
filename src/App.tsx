@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ParticleBackground from './components/background/ParticleBackground';
-import SideDrawer from './components/elements/drawer/SideDrawer';
-import { Box, Grid, GridItem, IconButton, Text } from '@chakra-ui/react';
-import { ReactComponent as ChevronIcon } from "./assets/icons/ChevronRight.svg"
+import { Box } from '@chakra-ui/react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import AboutSection from './components/sections/About';
 import ContactSection from './components/sections/Contact';
 import ProjectsSection from './components/sections/Projects';
 import NavBar from './components/elements/nav/NavBar';
 
+
 function App() {
-  const [drawer, setIsOpen] = useState(false)
   return (
     <div className="App">
       <ParticleBackground />
       <Router >
-        <NavBar/>
+        <NavBar />
         <Box>
           <Routes>
             <Route path="/" element={<Navigate to="/about" />} />
@@ -24,7 +22,6 @@ function App() {
             <Route path='/projects' element={<ProjectsSection />}></Route>
           </Routes>
         </Box>
-        <SideDrawer isOpen={drawer} onClose={() => setIsOpen(false)} />
       </Router>
     </div>
   );
