@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import ParticleBackground from './components/background/ParticleBackground';
 import { Box } from '@chakra-ui/react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';

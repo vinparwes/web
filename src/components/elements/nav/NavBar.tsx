@@ -1,6 +1,5 @@
 import {
     Flex,
-    useColorMode,
     Stack,
 } from '@chakra-ui/react';
 import AboutButton from '../buttons/AboutButton';

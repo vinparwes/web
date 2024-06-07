@@ -18,7 +18,7 @@ import {
 } from "@chakra-ui/react"
 import { Text } from "@chakra-ui/react"
 import { progLink } from "../../../interface/ProgrammingLinks"
-import { Project, ProjectDetails } from "../../../interface/Projects"
+import { ProjectDetails } from "../../../interface/Projects"
 
 interface ProjectCardProps {
     projectDetails: ProjectDetails,

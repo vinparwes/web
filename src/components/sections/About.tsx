@@ -1,4 +1,4 @@
-import { Box, Center, Heading, ScaleFade, Stack, useStyleConfig } from "@chakra-ui/react"
+import { Box, Center, Heading, ScaleFade, Stack } from "@chakra-ui/react"
 import { Text } from "@chakra-ui/react"
 
 function AboutSection() {

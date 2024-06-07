@@ -1,4 +1,4 @@
-import { IconButton, useColorMode } from "@chakra-ui/react"
+import { IconButton } from "@chakra-ui/react"
 import { useNavigate } from "react-router-dom"
 import { ReactComponent as AboutIcon } from "../../../assets/icons/InfoIcon.svg"
 
