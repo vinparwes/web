@@ -48,7 +48,7 @@ export default function ParticleOptionsLightMode(): ISourceOptions {
                 color: "#B2BEB5",
                 distance: 150,
                 enable: true,
-                opacity: 0.5,
+                opacity: 1,
                 width: 1,
             },
             

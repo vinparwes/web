@@ -9,7 +9,7 @@ export default function ParticleOptionsDarkMode(): ISourceOptions {
     return useMemo(() => ({
         background: {
             color: {
-                value: "#000000",
+                value: "#100c08",
             },
             opacity: 200,
         },
@@ -40,10 +40,10 @@ export default function ParticleOptionsDarkMode(): ISourceOptions {
             },
             
             links: {
-                color: "#FFFFFF",
+                color: "#343434",
                 distance: 150,
                 enable: true,
-                opacity: 0.5,
+                opacity: 1,
                 width: 1,
             },
             

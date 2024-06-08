@@ -7,6 +7,7 @@ import ProjectsSection from './components/sections/Projects';
 import NavBar from './components/elements/nav/NavBar';
 
 
+
 function App() {
   return (
     <div className="App">

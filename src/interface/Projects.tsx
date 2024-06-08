@@ -6,6 +6,9 @@ import { ReactComponent as ReactIcon } from "../assets/icons/ReactIcon.svg"
 import { ReactComponent as SpringBootIcon } from "../assets/icons/SpringBootIcon.svg"
 import { ReactComponent as TypescriptIcon } from "../assets/icons/TypescriptIcon.svg"
 
+import webPageImage from '../assets/images/my_page.png'
+import romExample from '../assets/images/app_rom_in_progress_priv.png'
+
 export interface ProjectDetails {
     heading: string,
     description: string,
@@ -13,7 +16,8 @@ export interface ProjectDetails {
     alt: string,
     frameWorkIcons: React.ElementType[],
     frameWorkHeaders: Array<string>,
-    projectUrls: Array<string>
+    projectUrls: Array<string>,
+    image : string
 }
 
 export interface Project {
@@ -28,18 +32,17 @@ const projects: Project = {
         iconPath: "",
         alt: "No icon found",
         frameWorkIcons: [
-            ChakraIcon,
             ReactIcon,
             TypescriptIcon
         ],
         frameWorkHeaders: [
-            "Chrakra",
             "React",
             "TypeScript"
         ],
         projectUrls: [
             "https://github.com/patriknotvincent/web"
-        ]
+        ],
+        image : webPageImage
     },
     projectROM: {
         heading: "Project ROM",
@@ -61,7 +64,8 @@ const projects: Project = {
         projectUrls: [
             "https://github.com/patriknotvincent/rom-cli.git",
             "https://github.com/patriknotvincent/rom-server"
-        ]
+        ],
+        image : romExample
     }
 }
 

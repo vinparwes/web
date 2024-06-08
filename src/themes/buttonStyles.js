@@ -34,7 +34,7 @@ const iconButton = defineStyle(
       border: '2px solid',
       borderColor: 'gray.200',
       textColor: 'white.200',
-      backgroundColor: 'black',
+      backgroundColor: '#100c08',
       '& svg' : {
         stroke: 'white'
       },

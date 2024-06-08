@@ -12,6 +12,7 @@ import VIcon from '../react_icons/VIcon';
 function NavBar() {
     return (
         <>
+        
             <Flex h={16} alignItems={'center'} justifyContent={'space-between'} position={'relative'}>
                 <Flex alignItems={'center'} ml={'2vh'}>
                     <Stack direction={'row'} spacing={7}>

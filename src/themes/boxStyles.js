@@ -41,7 +41,7 @@ const dialog = defineStyle(
 
 export const boxTheme = defineStyleConfig(
     {
-        variants: { brand },
+        variants: { brand, dialog },
         defaultProps: {
             variant: 'brand',
         },

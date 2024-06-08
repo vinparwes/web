@@ -3,6 +3,7 @@ import { cardTheme } from "./cardStyles";
 import { buttonTheme } from "./buttonStyles";
 import { iconTheme } from "./iconThemes";
 import { boxTheme } from "./boxStyles";
+import { imageTheme } from "./imageStyles";
 
 let theme;
 export default theme = extendTheme(
@@ -27,6 +28,7 @@ export default theme = extendTheme(
       }),
     },
     components: {
+      Image: imageTheme,
       Box: boxTheme,
       Icon: iconTheme,
       Card: cardTheme,
