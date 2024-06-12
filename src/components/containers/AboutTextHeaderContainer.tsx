@@ -1,4 +1,8 @@
-import { Box, Center, Heading, Text, useColorMode, useColorModeValue } from "@chakra-ui/react"
+import {
+    Box,
+    Center,
+    Heading
+} from "@chakra-ui/react"
 
 
 interface AboutTextContainerProps {

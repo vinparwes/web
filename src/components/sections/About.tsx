@@ -13,14 +13,18 @@ function AboutSection() {
                     <Box
                         padding={'2vh'}
                         mt={'4vh'}
-                        ml={'1vh'}
                         mr={'1vh'}
                         borderRadius={'2vh'}
                         position={'relative'}
-                        
+
                     >
                         <Flex>
                             <Stack>
+                                <Center>
+                                    <ScaleFade in={true} initialScale={0.9} delay={0.3}>
+                                        <Image border={'1px'} borderRadius={'full'} boxSize='30vh' objectFit={'cover'} src={me} />
+                                    </ScaleFade>
+                                </Center>
                                 <ScaleFade in={true} initialScale={0.9} delay={0.1}>
                                     <AboutTextHeaderContainer text={"Hi!"} />
                                 </ScaleFade>
@@ -37,20 +41,8 @@ function AboutSection() {
                                         <AboutTextContainer text={"I'm still much in the process of settling in Malmö, all while trying to find myself a context within software development. I'm working as a student mentor during the summer, but all in all I'm mostly just enjoying an entirely new social context and a new setting for summertime."} />
                                     </Center>
                                 </ScaleFade>
-                                <ScaleFade in={true} initialScale={0.9} delay={0.5}>
-                                    <AboutTextHeaderContainer text={"Where am I going?"} />
-                                </ScaleFade>
-                                <ScaleFade in={true} initialScale={0.9} delay={0.6}>
-                                    <Center>
-                                        <AboutTextContainer text={"I'd like to find a context for myself within software. My education was really broad in scope so I'd like to find a finesse. I'm thinking mobile development due to the last year of my studies involving a lot of React Native and Kotlin for Android."} />
-                                    </Center>
-                                </ScaleFade>
+
                             </Stack>
-                            <Center>
-                                <ScaleFade in={true} initialScale={0.9} delay={0.3}>
-                                    <Image border={'1px'} borderRadius={'full'} ml={'2vh'} boxSize='40vh' objectFit={'cover'} src={me} />
-                                </ScaleFade>
-                            </Center>
                         </Flex>
                     </Box >
                 </Center>

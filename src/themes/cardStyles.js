@@ -20,7 +20,6 @@ const brand = definePartsStyle({
   },
 });
 
-// export variants in the component theme
 export const cardTheme = defineMultiStyleConfig({
   variants: {
     brand
@@ -29,5 +28,3 @@ export const cardTheme = defineMultiStyleConfig({
     variant: 'brand',
   },
 });
-
-// now we can use the new funky variant

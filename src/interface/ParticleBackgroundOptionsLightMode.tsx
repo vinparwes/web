@@ -20,11 +20,6 @@ export default function ParticleOptionsLightMode(): ISourceOptions {
                     enable: true,
                     mode: "push",
                 },
-                /*
-                onHover: {
-                    enable: true,
-                    mode: "repulse",
-                },*/
             },
             modes: {
                 push: {
@@ -61,7 +56,7 @@ export default function ParticleOptionsLightMode(): ISourceOptions {
                 random: true,
                 speed: {
                     min : 0.1,
-                    max : 0.5
+                    max : 0.2
                 },
                 straight: false,
             },

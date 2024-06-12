@@ -56,7 +56,7 @@ export default function ParticleOptionsDarkMode(): ISourceOptions {
                 random: true,
                 speed: {
                     min : 0.1,
-                    max : 0.5
+                    max : 0.2
                 },
                 straight: false,
             },

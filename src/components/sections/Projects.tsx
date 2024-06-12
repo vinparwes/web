@@ -1,7 +1,6 @@
-import { Box, Center, Flex, ScaleFade, Stack } from "@chakra-ui/react"
+import { Center, ScaleFade, Stack } from "@chakra-ui/react"
 import ProjectCard from "../elements/card/ProjectCard"
 import projects from "../../interface/Projects"
-import TestCard from "../elements/card/TestCard"
 
 function ProjectsSection() {
     return (
@@ -22,9 +21,6 @@ function ProjectsSection() {
                         </Center>
                         <Center>
                             <ProjectCard {...projects.webProfile} delay={0.2} />
-                        </Center>
-                        <Center>
-                            <TestCard/>
                         </Center>
                     </Stack >
                 </Center>

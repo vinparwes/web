@@ -1,5 +1,4 @@
-import { Box, Text, useColorMode, useColorModeValue } from "@chakra-ui/react"
-
+import { Box, Text, useColorModeValue } from "@chakra-ui/react"
 
 interface AboutTextContainerProps {
     text: string,

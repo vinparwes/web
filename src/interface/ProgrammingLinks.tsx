@@ -8,6 +8,9 @@ export function progLink(name : string) {
         case "Spring Boot" : return "https://spring.io/projects/spring-boot"
         case "TypeScript" : return "https://www.typescriptlang.org/"
         case "Java" : return "https://www.java.com/en/"
+        case "Heroku" : return "https://dashboard.heroku.com"
+        case "Chakra UI" : return "https://v2.chakra-ui.com/"
+        case "TSParticles" : return "https://particles.js.org/"
         
     }
     return "Link not found"

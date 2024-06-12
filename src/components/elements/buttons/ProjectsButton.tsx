@@ -1,5 +1,3 @@
-
-
 import { IconButton, ScaleFade, Tooltip } from "@chakra-ui/react"
 import { ReactComponent as ProjectsIcon } from "../../../assets/icons/ProjectsIcon.svg"
 import { useNavigate } from "react-router-dom"
@@ -9,11 +7,11 @@ function ProjectsButton() {
     return (
         <>
             <ScaleFade initialScale={0.9} in delay={0.3}>
-                <Tooltip label={'Behold.. My stuff'}>
+                <Tooltip label={'Projects'}>
                     <IconButton
                         variant={'iconButton'}
                         transition="bg 0.2s, color 0.2s"
-                        aria-label="About my projects"
+                        aria-label='Projects'
                         size={'lg'}
                         mr={'1vh'}
                         icon={<ProjectsIcon />}

@@ -4,7 +4,6 @@ import {
     Stack,
     Heading,
     Divider,
-    CardFooter,
     Popover,
     PopoverArrow,
     PopoverBody,
@@ -15,38 +14,54 @@ import {
     Link,
     ScaleFade,
     Box,
-    Image,
-    Center
+    CardHeader,
+    Flex,
 } from "@chakra-ui/react"
 import { Text } from "@chakra-ui/react"
 import { progLink } from "../../../interface/ProgrammingLinks"
+import ImagesButton from "../buttons/ImagesButton"
+import { useState } from "react"
+import ProjectModal from "../../containers/ProjectModal"
 
 interface ProjectCardProps {
     heading: string,
-    description: string,
+    description: Array<string>,
     iconPath: string,
     alt: string,
     frameWorkIcons: React.ElementType[],
     frameWorkHeaders: Array<string>,
     projectUrls: Array<string>
     delay: number
-    image: string
+    images: Array<string>
 }
 
-function ProjectCard({ heading, description, frameWorkIcons, frameWorkHeaders, projectUrls, delay, image }: ProjectCardProps) {
+function ProjectCard({ heading, description, frameWorkIcons, frameWorkHeaders, projectUrls, delay, images }: ProjectCardProps) {
+    const [openModal, setOpenModal] = useState(false)
     return (
         <>
             <ScaleFade in={true} initialScale={0.9} delay={delay}>
-                <Card maxW={'50vh'} margin={'10px'}>
+                <Card maxW={'75vh'} mb={'1vh'}>
+                    <CardHeader>
+                        <Flex h={16} alignItems={'center'} justifyContent={'space-between'} position={'relative'}>
+                            <Heading size='lg'>{heading}</Heading>
+                            {images.length > 0 && (
+                                <>
+                                    <ImagesButton setOpenModal={() => setOpenModal(true)}></ImagesButton>
+                                </>
+                            )}
+                        </Flex>
+                    </CardHeader>
+                    <Divider borderColor={'black.500'} />
                     <CardBody justifyContent={'center'}>
-                        <Stack mt='3' spacing='3'>
-                            <Heading textAlign={'center'} size='md' userSelect={'none'}>{heading}</Heading>
-                            <Text userSelect={'none'}>{description}</Text>
+                        <Stack spacing='3'>
+                            {description.map((text, index) => (
+                                <Text>{text}</Text>
+                            ))}
                         </Stack>
                     </CardBody>
                     <Divider borderColor={'black.500'} />
                     <Stack mt='3' spacing='3'>
-                        <Heading userSelect={'none'} textAlign={'center'} size='md'>{frameWorkHeaders.length > 1 ? "Technologies" : "Technology"}</Heading>
+                        <Heading textAlign={'center'} size='md'>{frameWorkHeaders.length > 1 ? "Technologies" : "Technology"}</Heading>
                         <Stack
                             justifyContent={'center'}
                             direction="row"
@@ -76,14 +91,23 @@ function ProjectCard({ heading, description, frameWorkIcons, frameWorkHeaders, p
                     </Stack>
                     <Divider borderColor={'black.500'} />
                     <Stack mt={'1vh'} mb={'3vh'}>
-                        <Heading textAlign={'center'} size='md' userSelect={'none'}>{projectUrls.length > 1 ? "Links" : "Link"}</Heading>
+                        <Heading textAlign={'center'} size='md' >{projectUrls.length > 1 ? "Links" : "Link"}</Heading>
                         {projectUrls.map((text, index) => (
                             <Link textAlign={'center'} isExternal href={text}>{text}</Link>
                         ))}
                     </Stack>
+                    {images.length > 0 && (
+                        <>
+                            <ProjectModal
+                                isOpen={openModal}
+                                onClose={() => setOpenModal(false)}
+                                header={heading}
+                                images={images}
+                            />
+                        </>
+                    )}
                 </Card>
             </ScaleFade>
-
         </>
     )
 }
