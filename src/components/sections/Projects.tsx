@@ -10,7 +10,7 @@ function ProjectsSection() {
                     <Stack
                         padding={'2vh'}
                         mt={'2vh'}
-                        mr={'1vh'}
+                        mr={'2vh'}
                         borderRadius={'2vh'}
                         position={'relative'}
                     >

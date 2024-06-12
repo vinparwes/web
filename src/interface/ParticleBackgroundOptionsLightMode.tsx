@@ -15,12 +15,6 @@ export default function ParticleOptionsLightMode(): ISourceOptions {
         },
         fpsLimit: 60,
         interactivity: {
-            events: {
-                onClick: {
-                    enable: true,
-                    mode: "push",
-                },
-            },
             modes: {
                 push: {
                     quantity: 4,

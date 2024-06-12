@@ -9,7 +9,7 @@ function AboutTextContainer({ text }: AboutTextContainerProps) {
     return (
         <>
             <Box maxW={'80vh'} bg={bg} borderRadius={'1vh'} border={'1px'}>
-                <Text padding={'1vh'} userSelect={'none'}>{text}</Text>
+                <Text padding={'1vh'} >{text}</Text>
             </Box>
         </>
     )
