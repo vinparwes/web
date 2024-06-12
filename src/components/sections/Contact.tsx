@@ -1,4 +1,4 @@
-import { Box, Center, Grid, GridItem, Heading, ScaleFade, SimpleGrid, Stack } from "@chakra-ui/react"
+import { Box, Center, GridItem, Heading, ScaleFade, SimpleGrid, Stack } from "@chakra-ui/react"
 import LinkIconContainer from "../containers/LinkIconContainer"
 import { ReactComponent as GitHubIcon } from "../../assets/icons/GitHubIcon.svg"
 import { ReactComponent as LinkedInIcon } from "../../assets/icons/LinkedInIcon.svg"

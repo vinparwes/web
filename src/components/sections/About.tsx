@@ -1,11 +1,9 @@
-import { Box, Center, Flex, Heading, Image, ScaleFade, Stack } from "@chakra-ui/react"
+import { Box, Center, Flex, Image, ScaleFade, Stack } from "@chakra-ui/react"
 import AboutTextContainer from "../containers/AboutTextContainer"
 import me from '../../assets/images/me.jpg'
 import AboutTextHeaderContainer from "../containers/AboutTextHeaderContainer"
-import { useColorMode } from "@chakra-ui/react"
 
 function AboutSection() {
-    const { colorMode } = useColorMode();
     return (
         <>
             <ScaleFade in={true} initialScale={0.9} delay={0.05}>

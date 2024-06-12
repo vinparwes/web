@@ -1,5 +1,4 @@
 import {
-    Divider,
     Flex,
     Stack,
 } from '@chakra-ui/react';
