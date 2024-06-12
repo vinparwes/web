@@ -3,6 +3,7 @@ import { cardTheme } from "./cardStyles";
 import { buttonTheme } from "./buttonStyles";
 import { boxTheme } from "./boxStyles";
 import { imageTheme } from "./imageStyles";
+import { textTheme } from "./textTheme";
 
 let theme;
 export default theme = extendTheme(
@@ -18,6 +19,9 @@ export default theme = extendTheme(
       Box: boxTheme,
       Card: cardTheme,
       Button: buttonTheme,
+      Text : textTheme,
+      Heading : textTheme,
+      Link : textTheme
     },
   }
 )

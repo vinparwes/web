@@ -15,12 +15,14 @@ export default function ParticleOptionsDarkMode(): ISourceOptions {
         },
         fpsLimit: 60,
         interactivity: {
+            /*
             events: {
                 onClick: {
                     enable: true,
                     mode: "push",
                 },
             },
+            */
             modes: {
                 push: {
                     quantity: 4,

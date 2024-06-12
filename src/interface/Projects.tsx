@@ -58,9 +58,8 @@ const projects: Project = {
         description:
             [
                 "Bachelor's thesis and continuing effort with PITT and MAU. Android app for the purposes of measuring shoulder ROM using the MediaPipe package",
-                "It's effectively a client server relationship between the end-user and app acting as the client for a central server which professionals could use to interact with the data.",
+                "It's effectively a client server relationship between the end-user and app acting as the client for a central server which physicians could use to interact with the data.",
                 "Measuring through the Mediapipe package is effectively done and proven to work-ish, but the method still needs testing in a clinical setting.",
-                
             ],
         iconPath: "",
         alt: "No icon found",

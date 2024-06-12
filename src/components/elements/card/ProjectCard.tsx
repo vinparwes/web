@@ -70,7 +70,7 @@ function ProjectCard({ heading, description, frameWorkIcons, frameWorkHeaders, p
                         >
                             {frameWorkIcons.map((Icon, index) => (
                                 <Box ml={3}>
-                                    <Popover trigger="hover">
+                                    <Popover trigger="hover" placement="top-start">
                                         <PopoverTrigger>
                                             <Icon key={index} width="4vh" height="4vh" />
                                         </PopoverTrigger>

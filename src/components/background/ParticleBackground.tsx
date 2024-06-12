@@ -24,7 +24,7 @@ function ParticleBackground() {
     if (init) {
         return (
             <div >
-                <Box >
+                <Box>
                     <Particles
                         id="tsparticles"
                         options={colorMode === 'light' ? optionsLight : optionsDark}

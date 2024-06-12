@@ -12,7 +12,7 @@ function AboutSection() {
                 <Center>
                     <Box
                         padding={'2vh'}
-                        mt={'4vh'}
+                        mt={'2vh'}
                         mr={'1vh'}
                         borderRadius={'2vh'}
                         position={'relative'}

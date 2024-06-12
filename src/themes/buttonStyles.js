@@ -62,6 +62,7 @@ const linkButton = defineStyle(
       }
     },
     _dark: {
+      backgroundColor: '#100c08',
       'svg': {
         fill: 'black',
         stroke: 'white'

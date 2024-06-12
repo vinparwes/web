@@ -8,13 +8,11 @@ function ProjectsSection() {
             <ScaleFade in={true} initialScale={0.9} delay={0.05}>
                 <Center>
                     <Stack
-                        position={'relative'}
-                        p={4}
-                        borderRadius={20}
-                        w={'100vh'}
-                        mt={'4vh'}
-                        ml={'1vh'}
+                        padding={'2vh'}
+                        mt={'2vh'}
                         mr={'1vh'}
+                        borderRadius={'2vh'}
+                        position={'relative'}
                     >
                         <Center>
                             <ProjectCard {...projects.projectROM} delay={0.1} />
