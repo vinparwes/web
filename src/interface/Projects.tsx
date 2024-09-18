@@ -76,10 +76,8 @@ const projects: Project = {
             "Kotlin"
         ],
         projectUrls: [
-            "https://github.com/patriknotvincent/rom-cli.git",
-            "https://github.com/patriknotvincent/rom-server",
-            `{}`
-
+            "https://github.com/vinparwes/rom-cli.git",
+            "https://github.com/vinparwes/rom-server"
         ],
         images: [
             romExample,

@@ -14,7 +14,7 @@ function App() {
         <NavBar />
         <Box>
           <Routes>
-            <Route path="/" element={<Navigate to="/about" />} />
+            <Route path="/web" element={<Navigate to="/about" />} />
             <Route path='/about' element={<AboutSection />}></Route>
             <Route path='/contact' element={<ContactSection />}></Route>
             <Route path='/projects' element={<ProjectsSection />}></Route>
