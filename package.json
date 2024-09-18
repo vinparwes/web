@@ -1,7 +1,7 @@
 {
   "name": "web",
   "version": "0.1.0",
-  "homepage": "https://{username}.github.io",
+  "homepage": "https://vinparwes.github.io/web",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
