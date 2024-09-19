@@ -1,4 +1,11 @@
-import { Box, Flex, IconButton, Link, ScaleFade, Tooltip } from "@chakra-ui/react"
+import { 
+    Box, 
+    Flex, 
+    IconButton, 
+    Link, 
+    ScaleFade, 
+    Tooltip 
+} from "@chakra-ui/react"
 
 interface LinkIconContainerProps {
     ContactIcon: React.ElementType,
