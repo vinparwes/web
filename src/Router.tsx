@@ -7,7 +7,7 @@ import About from './components/sections/About';
 const router = createBrowserRouter(
     [
         {
-            path: "/web",
+            path: "/",
             element: <App />,
             children: [{
                 index: true,
