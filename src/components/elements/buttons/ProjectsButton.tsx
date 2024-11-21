@@ -1,9 +1,11 @@
-import { IconButton, ScaleFade, Tooltip } from "@chakra-ui/react"
-import { ReactComponent as ProjectsIcon } from "../../../assets/icons/ProjectsIcon.svg"
-import { useNavigate } from "react-router-dom"
+import { IconButton, ScaleFade, Tooltip } from "@chakra-ui/react";
+import { ReactComponent as ProjectsIcon } from "../../../assets/icons/ProjectsIcon.svg";
 
-function ProjectsButton() {
-    const navigation = useNavigate()
+interface ProjectsButtonProps {
+    setCurrentSection: (section: String) => void;
+}
+
+const ProjectsButton: React.FC<ProjectsButtonProps> = ({ setCurrentSection }) => {
     return (
         <>
             <ScaleFade initialScale={0.9} in delay={0.3}>
@@ -15,7 +17,7 @@ function ProjectsButton() {
                         size={'lg'}
                         mr={'1vh'}
                         icon={<ProjectsIcon />}
-                        onClick={() => navigation('/projects')}
+                        onClick={() => setCurrentSection('projects')}
                     >
                     </IconButton>
                 </Tooltip>

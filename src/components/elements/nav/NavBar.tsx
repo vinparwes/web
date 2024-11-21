@@ -9,7 +9,11 @@ import ModeButton from '../buttons/ModeButton';
 import VIcon from '../react_icons/VIcon';
 
 
-function NavBar() {
+interface NavBarProps {
+    setSection: (section: string) => void;
+}
+
+const NavBar: React.FC<NavBarProps> = ({ setSection: setCurrentSection }) => {
     return (
         <>
 
@@ -25,9 +29,9 @@ function NavBar() {
                     </Stack>
                 </Flex>
                 <Flex alignItems={'center'}>
-                    <AboutButton />
-                    <ProjectsButton />
-                    <ContactButton />
+                    <AboutButton setCurrentSection={() => setCurrentSection('about')} />
+                    <ProjectsButton setCurrentSection={() => setCurrentSection('projects')} />
+                    <ContactButton setCurrentSection={() => setCurrentSection('contact')} />
                 </Flex >
                 <Flex alignItems={'center'} mr={'1vh'}>
                     <Stack direction={'row'}>

@@ -1,9 +1,11 @@
-import { IconButton, ScaleFade, Tooltip } from "@chakra-ui/react"
-import { useNavigate } from "react-router-dom"
-import { ReactComponent as AboutIcon } from "../../../assets/icons/InfoIcon.svg"
+import { IconButton, ScaleFade, Tooltip } from "@chakra-ui/react";
+import { ReactComponent as AboutIcon } from "../../../assets/icons/InfoIcon.svg";
 
-function AboutButton() {
-    const navigation = useNavigate()
+interface AboutButtonProps {
+    setCurrentSection: (section: String) => void;
+}
+
+const AboutButton: React.FC<AboutButtonProps> = ({ setCurrentSection }) => {
     return (
         <>
             <ScaleFade initialScale={0.9} in delay={0.2}>
@@ -14,7 +16,7 @@ function AboutButton() {
                         size={'lg'}
                         icon={<AboutIcon />}
                         mr={'1vh'}
-                        onClick={() => navigation('/about')}
+                        onClick={() => setCurrentSection('about')}
                     >
                     </IconButton>
                 </Tooltip >

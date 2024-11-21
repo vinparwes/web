@@ -1,26 +1,32 @@
 import ParticleBackground from './components/background/ParticleBackground';
 import { Box } from '@chakra-ui/react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import AboutSection from './components/sections/About';
 import ContactSection from './components/sections/Contact';
 import ProjectsSection from './components/sections/Projects';
 import NavBar from './components/elements/nav/NavBar';
+import { useState } from 'react';
 
 function App() {
+  const [section, setSection] = useState('about');
+  const renderSection = () => {
+    switch (section) {
+      case 'about':
+        return <AboutSection />;
+      case 'contact':
+        return <ContactSection />;
+      case 'projects':
+        return <ProjectsSection />;
+      default:
+        return <AboutSection />;
+    }
+  };
   return (
     <div className="App">
       <ParticleBackground />
-      <Router >
-        <NavBar />
+        <NavBar setSection={setSection} />
         <Box>
-          <Routes>
-            <Route path="/web" element={<Navigate to="/about" />} />
-            <Route path='/about' element={<AboutSection />}></Route>
-            <Route path='/contact' element={<ContactSection />}></Route>
-            <Route path='/projects' element={<ProjectsSection />}></Route>
-          </Routes>
+          {renderSection()}
         </Box>
-      </Router>
     </div>
   );
 }
