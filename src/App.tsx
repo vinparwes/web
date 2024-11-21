@@ -1,6 +1,6 @@
 import ParticleBackground from './components/background/ParticleBackground';
 import { Box } from '@chakra-ui/react';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import AboutSection from './components/sections/About';
 import ContactSection from './components/sections/Contact';
 import ProjectsSection from './components/sections/Projects';
