@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import theme from './themes/theme';
 import { ChakraProvider } from '@chakra-ui/react';
-import { HashRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,9 +14,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-      <HashRouter>
         <App />
-      </HashRouter>
     </ChakraProvider>
   </React.StrictMode>
 );
