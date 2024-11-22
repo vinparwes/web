@@ -4,6 +4,10 @@ import me from '../../assets/images/me.jpg'
 import AboutTextHeaderContainer from "../containers/AboutTextHeaderContainer"
 
 function AboutSection() {
+
+    const aboutTextP1 = process.env.REACT_APP_ABOUT_TEXT_P1 || "Default fallback text";
+    const aboutTextP2 = process.env.REACT_APP_ABOUT_TEXT_P2 || "Default fallback text";
+
     return (
         <>
             <ScaleFade in={true} initialScale={0.9} delay={0.05}>
@@ -28,7 +32,7 @@ function AboutSection() {
                                 </ScaleFade>
                                 <ScaleFade in={true} initialScale={0.9} delay={0.2}>
                                     <Center>
-                                        <AboutTextContainer text={"I'm Vincent. 30-something software developer from Stockholm, currently based in Malmö. All but done with a bachelors degree in Systems Development from Malmö University and currently looking for a job."} />
+                                        <AboutTextContainer text={aboutTextP1} />
                                     </Center>
                                 </ScaleFade>
                                 <ScaleFade in={true} initialScale={0.9} delay={0.3}>
@@ -36,7 +40,7 @@ function AboutSection() {
                                 </ScaleFade>
                                 <ScaleFade in={true} initialScale={0.9} delay={0.4}>
                                     <Center>
-                                        <AboutTextContainer text={"I'm still much in the process of settling in Malmö, all while trying to find myself a context within software development. I'm working as a student mentor during the summer, but all in all I'm mostly just enjoying an entirely new social context and a new setting for summertime."} />
+                                        <AboutTextContainer text={aboutTextP2} />
                                     </Center>
                                 </ScaleFade>
 

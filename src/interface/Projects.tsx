@@ -4,7 +4,6 @@ import { ReactComponent as MongoDbIcon } from "../assets/icons/MongoDbIcon.svg"
 import { ReactComponent as ReactIcon } from "../assets/icons/ReactIcon.svg"
 import { ReactComponent as SpringBootIcon } from "../assets/icons/SpringBootIcon.svg"
 import { ReactComponent as TypescriptIcon } from "../assets/icons/TypescriptIcon.svg"
-import { ReactComponent as HerokuIcon } from "../assets/icons/HerokuIcon.svg"
 import { ReactComponent as NoneIcon } from "../assets/icons/QuestionMarkIcon.svg"
 
 import webPageImage from '../assets/images/my_page.png'
@@ -23,26 +22,27 @@ export interface ProjectDetails {
 
 export interface Project {
     webProfile: ProjectDetails,
-    projectROM: ProjectDetails
+    projectROM: ProjectDetails,
+    naikan: ProjectDetails,
 }
 
 const projects: Project = {
     webProfile: {
         heading: "/web",
-        description: ["I wanted a portfolio-esque website where I can play around with frameworks and eventually implement cool stuff. Built with React, styled with Chakra, hosted with Heroku."],
+        description: [
+            process.env.REACT_APP_PROJECT_DESC_WEB || "Default fallback text"
+        ],
         iconPath: "",
-        alt: "No icon found",
+        alt: "/web",
         frameWorkIcons: [
             ReactIcon,
             TypescriptIcon,
-            HerokuIcon,
             NoneIcon,
             NoneIcon
         ],
         frameWorkHeaders: [
             "React",
             "TypeScript",
-            "Heroku",
             "TSParticles",
             "Chakra UI"
         ],
@@ -57,9 +57,7 @@ const projects: Project = {
         heading: "Project ROM",
         description:
             [
-                "Bachelor's thesis with PITT and MAU. Android app for the purposes of measuring shoulder ROM using the MediaPipe package",
-                "It's effectively a client server relationship between the end-user and app acting as the client for a central server which physicians could use to interact with the data.",
-                "Measuring through the Mediapipe package is effectively done and proven to work-ish, but the method still needs testing in a clinical setting.",
+                process.env.REACT_APP_PROJECT_DESC_ROM || "Default fallback text"
             ],
         iconPath: "",
         alt: "No icon found",
@@ -82,6 +80,27 @@ const projects: Project = {
         images: [
             romExample,
         ]
+    },
+    naikan: {
+        heading: "Naikan",
+        description: ["Simple formatted diary adhering to Naikan meditation"],
+        iconPath: "",
+        alt: "Naikan",
+        frameWorkIcons: [
+            AndroidIcon,
+            KotlinIcon
+        ],
+        frameWorkHeaders: [
+            "Android",
+            "Kotlin"
+        ],
+        projectUrls : [
+            
+        ],
+        images: [
+
+        ]
+
     }
 }
 
