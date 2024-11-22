@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/web/static/css/main.1a44368a.css",
-    "main.js": "/web/static/js/main.7dfa3aee.js",
+    "main.js": "/web/static/js/main.5325f8aa.js",
     "static/js/453.c5eaf93b.chunk.js": "/web/static/js/453.c5eaf93b.chunk.js",
     "static/media/app_rom_in_progress_priv.png": "/web/static/media/app_rom_in_progress_priv.199505479fa39996c63f.png",
     "static/media/me.jpg": "/web/static/media/me.0ded5c8cb0ea4458a690.jpg",
@@ -24,25 +24,24 @@
     "static/media/VIcon.svg": "/web/static/media/VIcon.78b29dabeb8182da3dd28d04c85e3ddf.svg",
     "static/media/TypescriptIcon.svg": "/web/static/media/TypescriptIcon.dd4239e676029bdaf433b8497e0653e3.svg",
     "static/media/SpringBootIcon.svg": "/web/static/media/SpringBootIcon.dba37aa4faa63b8feb584bb7ad2f2378.svg",
-    "static/media/HerokuIcon.svg": "/web/static/media/HerokuIcon.319d9f1f6708a8bdca97dff20ad661cc.svg",
     "static/media/ProjectsIcon.svg": "/web/static/media/ProjectsIcon.ba89d31b5894ee7e7522b3f7302f86a5.svg",
     "static/media/KotlinIcon.svg": "/web/static/media/KotlinIcon.440a9b296fb0941654e8069c05d75b3d.svg",
     "static/media/SunIcon.svg": "/web/static/media/SunIcon.ae26f0b1b73e13fce7bcad569f484af6.svg",
     "index.html": "/web/index.html",
     "static/media/GitHubIcon.svg": "/web/static/media/GitHubIcon.68cfcf33b42be6ce1b9c24ab0d11941d.svg",
     "static/media/LinkedInIcon.svg": "/web/static/media/LinkedInIcon.10f31ae4655c9c4c35fd165c64d785f6.svg",
-    "static/media/QuestionMarkIcon.svg": "/web/static/media/QuestionMarkIcon.7219ef959ebe3c2b294131e3e94ceeeb.svg",
     "static/media/ImageIcon.svg": "/web/static/media/ImageIcon.a027c1195a4309bb347267e3473a545c.svg",
     "static/media/LinkIcon.svg": "/web/static/media/LinkIcon.9c75458d728ee08ff361a71957b32c4e.svg",
+    "static/media/QuestionMarkIcon.svg": "/web/static/media/QuestionMarkIcon.bb9dee1bbc37a83f7f27dc771f0790e1.svg",
     "static/media/MailIcon.svg": "/web/static/media/MailIcon.fd6640ce4472127729d24d9a64d3dd6f.svg",
     "static/media/InfoIcon.svg": "/web/static/media/InfoIcon.ee84f0dbbc6951c1735cf792339f1712.svg",
     "static/media/MoonIcon.svg": "/web/static/media/MoonIcon.7571303c3c7ea5ad987db34a350cc132.svg",
     "main.1a44368a.css.map": "/web/static/css/main.1a44368a.css.map",
-    "main.7dfa3aee.js.map": "/web/static/js/main.7dfa3aee.js.map",
+    "main.5325f8aa.js.map": "/web/static/js/main.5325f8aa.js.map",
     "453.c5eaf93b.chunk.js.map": "/web/static/js/453.c5eaf93b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1a44368a.css",
-    "static/js/main.7dfa3aee.js"
+    "static/js/main.5325f8aa.js"
   ]
 }
