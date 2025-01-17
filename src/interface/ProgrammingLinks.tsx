@@ -11,6 +11,7 @@ export function progLink(name : string) {
         case "Heroku" : return "https://dashboard.heroku.com"
         case "Chakra UI" : return "https://v2.chakra-ui.com/"
         case "TSParticles" : return "https://particles.js.org/"
+        case "Jetpack Compose" : return "https://developer.android.com/compose"
         
     }
     return "Link not found"

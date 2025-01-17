@@ -1,12 +1,19 @@
+import { ReactComponent as NoneIcon } from "../assets/icons/QuestionMarkIcon.svg"
 import { ReactComponent as AndroidIcon } from "../assets/icons/AndroidIcon.svg"
 import { ReactComponent as KotlinIcon } from "../assets/icons/KotlinIcon.svg"
 import { ReactComponent as MongoDbIcon } from "../assets/icons/MongoDbIcon.svg"
 import { ReactComponent as ReactIcon } from "../assets/icons/ReactIcon.svg"
 import { ReactComponent as SpringBootIcon } from "../assets/icons/SpringBootIcon.svg"
 import { ReactComponent as TypescriptIcon } from "../assets/icons/TypescriptIcon.svg"
-import { ReactComponent as NoneIcon } from "../assets/icons/QuestionMarkIcon.svg"
+import { ReactComponent as JetPackComposeIcon } from "../assets/icons/JetPackComposeIcon.svg"
 
 import webPageImage from '../assets/images/my_page.png'
+import naikanImage1 from "../assets/images/naikan_1.png"
+import naikanImage2 from "../assets/images/naikan_2.png"
+import naikanImage3 from "../assets/images/naikan_3.png"
+import naikanImage4 from "../assets/images/naikan_4.png"
+import naikanImage5 from "../assets/images/naikan_5.png"
+import naikanImage6 from "../assets/images/naikan_6.png"
 import romExample from '../assets/images/app_rom_in_progress_priv.png'
 
 export interface ProjectDetails {
@@ -83,22 +90,32 @@ const projects: Project = {
     },
     naikan: {
         heading: "Naikan",
-        description: ["Simple formatted diary adhering to Naikan meditation"],
+        description:
+            [
+                process.env.REACT_APP_PROJECT_DESC_NAI || "This is a test to check whether the box automatically does stuff when the text is long enough...."
+            ],
         iconPath: "",
         alt: "Naikan",
         frameWorkIcons: [
             AndroidIcon,
-            KotlinIcon
+            KotlinIcon,
+            JetPackComposeIcon
         ],
         frameWorkHeaders: [
             "Android",
-            "Kotlin"
+            "Kotlin",
+            "Jetpack Compose"
         ],
-        projectUrls : [
-            
+        projectUrls: [
+            "https://github.com/vinparwes/naikan.git"
         ],
         images: [
-
+            naikanImage1,
+            naikanImage2,
+            naikanImage3,
+            naikanImage4,
+            naikanImage5,
+            naikanImage6,
         ]
 
     }

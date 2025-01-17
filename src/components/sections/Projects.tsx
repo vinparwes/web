@@ -15,10 +15,13 @@ function ProjectsSection() {
                         position={'relative'}
                     >
                         <Center>
-                            <ProjectCard {...projects.projectROM} delay={0.1} />
+                            <ProjectCard {...projects.naikan} delay={0.1}/>
                         </Center>
                         <Center>
-                            <ProjectCard {...projects.webProfile} delay={0.2} />
+                            <ProjectCard {...projects.projectROM} delay={0.2} />
+                        </Center>
+                        <Center>
+                            <ProjectCard {...projects.webProfile} delay={0.3} />
                         </Center>
                     </Stack >
                 </Center>
